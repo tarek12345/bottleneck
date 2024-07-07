@@ -2,32 +2,144 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+.nav-pills .nav-link {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+}
+button.nav-link {
+    color: #000;
+}
+#sidebar .nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+    color: #296283;
+    background-color: #ffffff;
+}
+div#sidebar {
+    width: 25%;
+}
+div#sidebar div#v-pills-tab {
+    width: 40%;
+    gap: 7px;
+}
+div#content_right {
+    width: 75%;
+}
+div#v-pills-tabContent {
+    width: 60%;
+}
+#sidebar .tab-content {
+    background: white;
+    padding: 13px;
+    box-shadow: 0px 0px 5px 0px #EEE;
+    border-radius: 10px;
+    height: 90vh;
+    position: relative;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+#sidebar .tab-pane {
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    flex-direction: column;
+    gap: 20px;
+    position: absolute;
+    top: 0;
+    padding: 10px;
+}
+#sidebar .nav-pills .nav-link{
+    border-bottom: 1px solid #eee;
+}
+#PurchaseOrders .input-group {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 187px;
+}
+
+#PurchaseOrders .input-group .form-control {
+    padding-right: 2rem; /* Adjust padding to make space for the icon */
+}
+
+#PurchaseOrders .input-group-text {
+    position: absolute;
+    right: 10px;
+    background: transparent;
+    border: none;
+    display: flex;
+    align-items: center;
+ 
+}
+#PurchaseOrders .input-group .form-control {
+    padding-right: 2rem; /* Adjust padding to make space for the icon */
+}
+.completed,.Paid {
+    background-color: #cff7a8;
+    color: green;
+    padding: 4px;
+    border-radius:10px
   }
-}
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-}
-
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
+  .approved,.Open {
+    background-color: yellow;
+    color: orange;
+    padding: 4px;
+    border-radius: 10px
   }
+#PurchaseOrders .nav-pills .nav-link.active, #PurchaseOrders .nav-pills .show>.nav-link {
+    color: var(--bs-nav-pills-link-active-bg);
+    border-bottom: 1px solid var(--bs-nav-pills-link-active-bg);
+    background-color: transparent;
+    border-radius: 0px;
+}
+#PurchaseOrders .input-group-text .fas {
+    color: #aaa;
+}
+#PurchaseOrders  button.btn.btn-secondary.ml-2 {
+    position: absolute;
+    right: 0;
+    BACKGROUND: transparent;
+    color: #404447;
+    border-left: navajowhite;
+    border-color: #dee2e6;
+}
+#PurchaseOrders .btn-csv,#PurchaseOrders .css-14mxsc7-MuiDataGrid-root .MuiDataGrid-container--top [role=row] {
+    background: #efefef;
+}
+#PurchaseOrders  .css-t89xny-MuiDataGrid-columnHeaderTitle {
+    color: #0c4a6e;
+    text-transform: uppercase;
+}
+#PurchaseOrders .btn-csv a {
+    background: transparent;
+    color: #2d99d7;
+    font-size: 12px;
+    border: none;
+}
+
+.user_auth-1 {
+    background: #0d6efd;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.user_auth .dropdown, .user_auth .dropdown a {
+    color: white;
+    padding: 0;
+}
+.user_auth .dropdown-menu.show {
+    display: block;
+    padding: 6px;
+}
+.user_auth .dropdown a.dropdown-item {
+    color: #2d2d2d;
+}
+.user_auth-1 {
+    background: #0d6efd;
+    padding: 10px;
+    border-radius: 10px;
+    color: #fff;
+    font-weight: bold;
+}
+.user_auth .dropdown a {
+    font-size: 12px;
 }
